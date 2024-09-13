@@ -1,20 +1,20 @@
 package com.selenium.test;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Com.Selenium.Test.HomePage;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utility.ConfigUtility;
 import utility.ScreenshotUtility;
 
-public class BrowserLaunch {
+
+
+public class TC_1_TestMakemyTripSearch {
 	WebDriver driver;
 	
 	 @BeforeMethod

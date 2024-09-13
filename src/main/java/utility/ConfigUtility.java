@@ -15,7 +15,7 @@ public class ConfigUtility {
 
     // Static block to initialize the final static field
     static {
-        String appUrlTemp; // Local variable for temporary storage
+        String appUrlTemp; 
 
         try (InputStream input = ConfigUtility.class.getClassLoader().getResourceAsStream("config.properties")) {
             if (input == null) {
@@ -25,7 +25,7 @@ public class ConfigUtility {
             appUrlTemp = properties.getProperty("Appurl");
         } catch (IOException e) {
             System.out.println("Error reading the properties file: " + e.getMessage());
-            appUrlTemp = "default_url"; // Fallback value if an error occurs
+            appUrlTemp = "default_url";
         }
 
         // Initialize the final static field
