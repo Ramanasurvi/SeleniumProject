@@ -1,8 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="2">
+<suite name="Suite" verbose="2" parallel="methods" thread-count="2">
   <test name="Test">
+ <!-- <groups>
+  <run>
+  <include name="flipkart"/>
+  <include name="makemytrip"/>
+  </run>
+  </groups> -->
     <classes>
-      <class name="com.selenium.test.BrowserLaunch"/>
+      <class name="com.selenium.test.TC_2_TestFlipkartHome"/>
+      <class name="com.selenium.test.TC_1_TestMakemyTripSearch"/>
     </classes>
   </test>
 </suite>

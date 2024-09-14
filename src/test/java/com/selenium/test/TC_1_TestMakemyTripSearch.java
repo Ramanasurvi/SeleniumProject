@@ -7,6 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import Com.Selenium.Test.BrowserLaunch;
+import Com.Selenium.Test.FlipkartHomePage;
 import Com.Selenium.Test.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utility.ConfigUtility;
@@ -14,24 +16,29 @@ import utility.ScreenshotUtility;
 
 
 
-public class TC_1_TestMakemyTripSearch {
+public class TC_1_TestMakemyTripSearch{
 	WebDriver driver;
+	HomePage hp;
+	ScreenshotUtility ss;
+	BrowserLaunch b = new BrowserLaunch();
 	
-	 @BeforeMethod
-	    public void setup() {
-	        WebDriverManager.chromedriver().setup();  // Setup ChromeDriver
-	        driver = new ChromeDriver(); 				// Initialize WebDriver
-	        driver.manage().window().maximize(); 
-	    	driver.get(ConfigUtility.APP_URL);
-
-	    }
 	
-	@Test
+	@BeforeMethod
+	public void p2() {
+		System.out.println("inside p2 method");
+		 b.setup();
+		 driver=b.getDriver();
+		 System.out.println("driver: "+driver);
+		 hp = new HomePage(driver);    			// initializing HomePage
+		 ss = new ScreenshotUtility(driver);  			// initializing ScreenshotUtility
+		 driver.get(ConfigUtility.MakemyTripAppurl);
+		}
+	
+	@Test(groups="makemytrip")
 	public void verifyUserabletoSearch() throws InterruptedException {	
-	HomePage hp = new HomePage(driver);    // initializing HomePage
-	
-	ScreenshotUtility ss = new ScreenshotUtility(driver); //initializing ScreenshotUtility
-	
+		 System.out.println("Inside verifyUserabletoSearch test");
+		 System.out.println("driver: "+driver);
+		 
 	hp.clicktripType();
 	
 	hp.selecttripTypeSecOpt();
@@ -50,11 +57,11 @@ public class TC_1_TestMakemyTripSearch {
 	
 	hp.clickSearch();
 	
-	Thread.sleep(5000);
+	Thread.sleep(2000);
 	
 	hp.clickCustomModelPopUp();
 	
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 	
 	Assert.assertTrue(hp.verifyTextOnPage(), "The text "+hp.getTextOnPage()+" is not displayed on the page.");
 	
@@ -64,9 +71,8 @@ public class TC_1_TestMakemyTripSearch {
 	
 	@AfterMethod
 	public void tearDown() {
-		if(driver!=null) {
-			driver.quit();
-		}
+		b.tearDown();  									// Quit the WebDriver after the test
 	}
+
 	
     }

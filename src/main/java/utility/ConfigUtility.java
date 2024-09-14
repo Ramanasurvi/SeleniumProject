@@ -10,25 +10,28 @@ public class ConfigUtility {
 
     private static Properties properties = new Properties();
 
-    // Declare the final static field
-    public static final String APP_URL;
+    // Declare the final static field FlipkartAppurl
+    public static String MakemyTripAppurl;
+    public static String FlipkartAppurl;
 
     // Static block to initialize the final static field
     static {
-        String appUrlTemp; 
+//        String appUrlTemp; 
 
         try (InputStream input = ConfigUtility.class.getClassLoader().getResourceAsStream("config.properties")) {
             if (input == null) {
                 throw new IOException("Property file not found in the classpath");
             }
             properties.load(input);
-            appUrlTemp = properties.getProperty("Appurl");
+            MakemyTripAppurl = properties.getProperty("MakemyTripAppurl");
+            FlipkartAppurl = properties.getProperty("FlipkartAppurl");
+            
         } catch (IOException e) {
             System.out.println("Error reading the properties file: " + e.getMessage());
-            appUrlTemp = "default_url";
+//            appUrlTemp = "default_url";
         }
 
         // Initialize the final static field
-        APP_URL = appUrlTemp;
+//        MakemyTripAppurl = appUrlTemp;
     }
 }

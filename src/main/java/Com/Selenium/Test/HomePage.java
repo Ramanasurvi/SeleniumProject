@@ -1,10 +1,14 @@
 package Com.Selenium.Test;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,6 +18,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class HomePage {
 
 	private WebDriver driver;
+	private Robot robot ;
+	
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		try {
+			robot = new Robot();
+		} catch (AWTException e) {
+			e.printStackTrace();
+		}
+	}
 
 	// locators
 	public static By tripType = By.id("tripType");
@@ -26,7 +40,7 @@ public class HomePage {
 	public static By depart = By.xpath("//label[text()='Depart']");
 	public static By selectdepartdate = By.xpath("//a[@class='ui-state-default'][text()='14']");
 	public static By returnlocator = By.xpath("//label[text()='Return']");
-	public static By returndate = By.xpath("//a[@class='ui-state-default'][text()='16']");
+	public static By returndate = By.xpath("//div[@class='ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right']//span[text()='October']/ancestor::div/following-sibling::table//a[text()='16']");
 	public static By passengersclass = By.xpath("//label[text()='Passengers & Class']");
 	public static By numadults = By.xpath("//ul[@class='pax-counter pax-counter-adults']/li[text()='2']");
 	public static By childnum = By.xpath("//ul[@class='pax-counter pax-counter-children']/li[text()='1']");
@@ -38,13 +52,13 @@ public class HomePage {
 	public static By appliedfilter = By.xpath("//p[@class='filtersHeading appendBottom15'][text()='Applied Filters']");
 	public static By customdialogbox = By.xpath("//button[text()='OKAY, GOT IT!']");
 
-	public HomePage(WebDriver driver) {
-		this.driver = driver;
-	}
+
 
 	public void clicktripType() {
 
 		try {
+			System.out.println("Inside ClicktripType method");
+			System.out.println("driver: "+driver);
 			driver.findElement(tripType).click();
 		} catch (Exception e) {
 			System.out.println("Failed to click the element: " + e.getMessage());
@@ -179,6 +193,19 @@ public class HomePage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(customdialogbox));
 		element.click();
+	}
+	
+	public void keyActions(){
+		
+		WebElement e = driver.findElement(appliedfilter);
+		
+		e.sendKeys(Keys.ENTER);
+		
+		String a= Keys.chord(Keys.ENTER, Keys.CONTROL);
+		
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_2);
+		
 	}
 
 }

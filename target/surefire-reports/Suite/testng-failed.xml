@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="2" parallel="methods" name="Test(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="flipkart"/>
+        <include name="makemytrip"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.selenium.test.TC_1_TestMakemyTripSearch">
+        <methods>
+          <include name="verifyUserabletoSearch"/>
+        </methods>
+      </class> <!-- com.selenium.test.TC_1_TestMakemyTripSearch -->
+      <class name="com.selenium.test.TC_2_TestFlipkartHome">
+        <methods>
+          <include name="verifyFlipkartHomePage"/>
+        </methods>
+      </class> <!-- com.selenium.test.TC_2_TestFlipkartHome -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
