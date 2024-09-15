@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.test.TC_2_TestFlipkartHome">
+      <class name="com.selenium.test.TC_3_TestWindowHandles">
         <methods>
-          <include name="verifyFlipkartHomePage"/>
+          <include name="VerifyWindowHandles"/>
           <include name="tearDown"/>
-          <include name="p"/>
+          <include name="p1"/>
         </methods>
-      </class> <!-- com.selenium.test.TC_2_TestFlipkartHome -->
+      </class> <!-- com.selenium.test.TC_3_TestWindowHandles -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

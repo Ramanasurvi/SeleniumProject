@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-14T23:24:32 IST" name="Suite" finished-at="2024-09-14T23:24:45 IST" duration-ms="12979">
+  <suite started-at="2024-09-14T23:33:34 IST" name="Suite" finished-at="2024-09-14T23:33:48 IST" duration-ms="14013">
     <groups>
       <group name="flipkart">
         <method signature="TC_2_TestFlipkartHome.verifyFlipkartHomePage()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" name="verifyFlipkartHomePage" class="com.selenium.test.TC_2_TestFlipkartHome"/>
@@ -11,31 +11,31 @@
         <method signature="TC_1_TestMakemyTripSearch.verifyUserabletoSearch()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" name="verifyUserabletoSearch" class="com.selenium.test.TC_1_TestMakemyTripSearch"/>
       </group> <!-- makemytrip -->
     </groups>
-    <test started-at="2024-09-14T23:24:32 IST" name="Test" finished-at="2024-09-14T23:24:45 IST" duration-ms="12979">
+    <test started-at="2024-09-14T23:33:34 IST" name="Test" finished-at="2024-09-14T23:33:48 IST" duration-ms="14013">
       <class name="com.selenium.test.TC_2_TestFlipkartHome">
-        <test-method is-config="true" signature="p1()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" started-at="2024-09-14T23:24:32 IST" name="p1" finished-at="2024-09-14T23:24:36 IST" duration-ms="3873" status="PASS">
+        <test-method is-config="true" signature="p1()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" started-at="2024-09-14T23:33:35 IST" name="p1" finished-at="2024-09-14T23:33:38 IST" duration-ms="3940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- p1 -->
-        <test-method signature="verifyFlipkartHomePage()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" started-at="2024-09-14T23:24:36 IST" name="verifyFlipkartHomePage" finished-at="2024-09-14T23:24:41 IST" duration-ms="4492" status="PASS">
+        <test-method signature="verifyFlipkartHomePage()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" started-at="2024-09-14T23:33:38 IST" name="verifyFlipkartHomePage" finished-at="2024-09-14T23:33:43 IST" duration-ms="4660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFlipkartHomePage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" started-at="2024-09-14T23:24:41 IST" name="tearDown" finished-at="2024-09-14T23:24:41 IST" duration-ms="266" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.test.TC_2_TestFlipkartHome@1ea9f6af]" started-at="2024-09-14T23:33:43 IST" name="tearDown" finished-at="2024-09-14T23:33:43 IST" duration-ms="300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.selenium.test.TC_2_TestFlipkartHome -->
       <class name="com.selenium.test.TC_1_TestMakemyTripSearch">
-        <test-method is-config="true" signature="p2()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" started-at="2024-09-14T23:24:32 IST" name="p2" finished-at="2024-09-14T23:24:36 IST" duration-ms="3986" status="PASS">
+        <test-method is-config="true" signature="p2()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" started-at="2024-09-14T23:33:35 IST" name="p2" finished-at="2024-09-14T23:33:38 IST" duration-ms="3339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- p2 -->
-        <test-method signature="verifyUserabletoSearch()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" started-at="2024-09-14T23:24:36 IST" name="verifyUserabletoSearch" finished-at="2024-09-14T23:24:45 IST" duration-ms="8695" status="PASS">
+        <test-method signature="verifyUserabletoSearch()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" started-at="2024-09-14T23:33:38 IST" name="verifyUserabletoSearch" finished-at="2024-09-14T23:33:47 IST" duration-ms="9481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserabletoSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" started-at="2024-09-14T23:24:45 IST" name="tearDown" finished-at="2024-09-14T23:24:45 IST" duration-ms="250" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.test.TC_1_TestMakemyTripSearch@323b36e0]" started-at="2024-09-14T23:33:47 IST" name="tearDown" finished-at="2024-09-14T23:33:48 IST" duration-ms="1150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

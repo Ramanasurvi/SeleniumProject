@@ -13,6 +13,7 @@ public class ConfigUtility {
     // Declare the final static field FlipkartAppurl
     public static String MakemyTripAppurl;
     public static String FlipkartAppurl;
+    public static String HRYWindowHandleAppurl;
 
     // Static block to initialize the final static field
     static {
@@ -23,8 +24,9 @@ public class ConfigUtility {
                 throw new IOException("Property file not found in the classpath");
             }
             properties.load(input);
-            MakemyTripAppurl = properties.getProperty("MakemyTripAppurl");
-            FlipkartAppurl = properties.getProperty("FlipkartAppurl");
+            MakemyTripAppurl = properties.getProperty("makemytripappurl");
+            FlipkartAppurl = properties.getProperty("flipkartappurl");
+            HRYWindowHandleAppurl = properties.getProperty("hrywindowhandleappurl");
             
         } catch (IOException e) {
             System.out.println("Error reading the properties file: " + e.getMessage());
